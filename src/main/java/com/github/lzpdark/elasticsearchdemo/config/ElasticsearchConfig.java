@@ -3,12 +3,15 @@ package com.github.lzpdark.elasticsearchdemo.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.elasticsearch.client.ClientConfiguration;
 import org.springframework.data.elasticsearch.client.elc.ElasticsearchConfiguration;
+import org.springframework.lang.NonNull;
 
 /**
  * @author lzp
  */
 @Configuration
 public class ElasticsearchConfig extends ElasticsearchConfiguration {
+
+    @NonNull
     @Override
     public ClientConfiguration clientConfiguration() {
         return ClientConfiguration.builder()
